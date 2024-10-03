@@ -27,10 +27,31 @@
     // template string o template literal
     response.style.color = 'green'
     response.textContent = `SR/SRA/SRE ${username.value} su nota definitiva es: ${result}`    
+  
+  if (result <3.5){
+    response.style.color = `black`
+    response.textContent = `SR/SRA/SRE ${username.value} usted perdio la materia: ${result}`
+  
+  } else if (result >=3.5 && result <=4.5){
+    response.style.color = `orange`
+    response.textContent = `SR/SRA/SRE ${username.value} usted gano la materia: ${result}`
+  
+  } else if (result >4.5){
+    response.style.color = `green`
+    response.textContent = `SR/SRA/SRE ${username.value} usted tuvo una nota sobresaliente: ${result}`
   }
-
+  }
   
 
+   const predictbtn  = document.querySelector('#predictbtn')
+  predictbtn.addEventListener('click', predict)
 
-
-
+  function predict () {
+      alert(username.value)
+      
+    }
+  
+  
+  
+  
+  
